@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Bruno+Ace+SC&display=swap');
+
+html {
+background-color: black;
+overflow-x: hidden;
+font-family: "Alumni Sans Pinstripe", sans-serif !important;
+
+}
+::-webkit-scrollbar { overflow-y:hidden; }
+
+.aurora-container {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fullscreen-container {
+    background-color: black;
+    display: flex;
+    flex-direction: column; /* Empilhar elementos verticalmente */
+    align-items: center; /* Centralizar horizontalmente */
+    justify-content: center; /* Centralizar verticalmente */
+    height: 30vh;
+    width: 100vw;
+    text-align: center; /* Para garantir alinhamento de texto */
+    
+font-family: "Alumni Sans Pinstripe", sans-serif !important;
+}
+
+.gradient-text {
+    margin-top: 0px; /* Adicione um espaço entre BlurText e GradientText */
+    font-size: 40px;
+}
+
+  .custom-class{
+    
+  }
+  
+  .subtitle {
+    font-size: 2rem;
+    margin-top: -0rem;
+  }
+
+  .typewriter {
+    color: white;
+    font-size: 9rem;
+    font-family: "Tinos", serif;
+    font-weight: 500;
+    font-style: normal;
+    position: relative;
+    z-index: 2;
+  }
+
+  .circle-title {
+    position: absolute;
+    left: 13%;
+    top: 25%;
+    width: 350px; /* Ajuste conforme necessário */
+    height: 350px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.37);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    font-size: 32px;
+    font-weight: bold;
+    z-index: 1;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  
+  .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    padding: 20px 0;
+    z-index: 3;
+  }
+
+  .gooey-nav-container{
+    background: transparent;
+  }
+
+  .gooey-nav-container .effect.filter::before {
+    background: transparent !important;
+  }
+  
+  .header-title {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    margin-right: 3rem;
+    text-align: left !important;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    z-index: 1;
+  }
+  
+  .columns-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    padding: 40px;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaço entre as colunas quando quebram */
+}
+
+.column {
+    width: 30%;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+  .header-title-card{
+    background-color: black;
+    width: 100%;
+    height: 2rem;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 25px;
+  }
+  .header-cont-1{
+    margin-top: 1%;
+    width: 100%;
+    height: 45rem;
+    border: 1px solid black;
+    background-image: url('../Assets/gabriella.jpg');
+    background-size: cover;
+    background-position: 80% 44%;
+    background-repeat: no-repeat;
+  }
+  .header-cont-2{
+    margin-top: 1%;
+    width: 100%;
+    height: 45rem;
+    border: 1px solid black;
+    background-image: url('../Assets/rata.jpg');
+    background-size: cover;
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+  }
+  .header-cont-3{
+    margin-top: 1%;
+    width: 100%;
+    height: 45rem;
+    border: 1px solid black;
+    background-image: url('../Assets/tag.jpg');
+    background-size: cover;
+    background-position: 50% 44%;
+    background-repeat: no-repeat;
+  }
+  .about-container {
+    background-color: white;
+    display: flex;
+    justify-content: space-between; /* Separa os elementos horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    gap: 40px;
+    margin-top: -150px;
+    padding: 5%;
+    height: 90vh;
+    width: 100%;
+}
+
+/* Mantém o Lanyard fixo à esquerda */
+.lanyard-container {
+    flex: 1; /* Ocupa um espaço proporcional */
+    display: flex;
+    justify-content: flex-start; /* Alinha à esquerda */
+}
+
+/* Mantém os textos à direita, um abaixo do outro */
+.text-container {
+    flex: 1; /* Ocupa um espaço proporcional */
+    display: flex;
+    flex-direction: column; /* Organiza os textos verticalmente */
+    align-items: flex-start; /* Alinha os textos à esquerda */
+}
+
+  .about-circle {
+    width: 350px;
+    height: 350px;
+    border: 0.5px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.about-text {
+    max-width: 900px;
+    font-size: 32px;
+    line-height: 1.5;
+    color: white;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+  .contact-container{
+  }
+
+  .label-contact{
+  color: white;
+  width: 285px;
+  height: 50px;
+  background-color: black;
+  font-size: 45px;
+  padding: 10px 30px 10px 30px;
+  margin-bottom: 100px;
+  
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  }
+
+  .contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .form-input {
+    width: 90%;
+    height: 70px;
+    margin-right: 50px;
+    padding: 10px;
+    border-bottom: 4px solid black;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 5px;
+    background: transparent;
+    color: black;
+    font-size: 16px;
+  }
+  
+  .form-textarea {
+    width: 90%;
+    height: 100px;
+    padding: 10px;
+    border-bottom: 4px solid black;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    resize: none;
+  }
+  
+  .form-button {
+    background: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 70%;
+    
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  }
+
+  .footer-content{
+    background-color: black;
+    height: 6rem;
+  }
+
+  .footer-email{
+    color: white
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 16px;
+    background-color: black;
+}
+
+/* Agrupa os ícones e o e-mail */
+.footer-content {
+    display: flex;
+    flex-direction: initial;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+/* Mantém os ícones lado a lado */
+.icons-group {
+    display: flex;
+    gap: 16px;
+}
+
+/* Estilo dos ícones */
+.icon-wrapper {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2d2d2d;
+    border-radius: 50%;
+}
+
+.icon {
+    color: white;
+    font-size: 24px;
+}
+
+.footer-email {
+    color: white;
+    font-size: 18px;
+}
+
+  @media (max-width: 900px) {
+    .columns-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        width: 80%; /* Ajusta a largura para melhor exibição */
+    }
+
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    margin-top: -200px !important;
+  }
+
+  .about-circle {
+      margin-right: 0; /* Remove qualquer deslocamento lateral */
+      width: 220px;
+      height: 220px;
+  }
+  
+  .about-text {
+      max-width: 100%; /* Garante que o texto não fique muito estreito */
+      margin-bottom: 15px;
+  }
+
+  .circle-title{
+    width: 300px;
+    height: 300px;
+    top: 200px;
+    left: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+    .column {
+        width: 100%; /* Ocupa toda a largura da tela */
+    }
+    .about-text{
+      font-size: 25px;
+    }
+    .typewriter{
+      font-size: 4.5rem;
+      font-weight: 500;
+      margin-top: 8rem;
+    }
+    .circle-title{
+      width: 220px;
+      height: 220px;
+      top: 140px;
+      left: 90px;
+    }
+    .fullscreen-container{
+      background-position: 50% 10%;
+    }
+    .header-title{
+      margin-right: 1rem;
+    }
+    .contact-form{
+      margin-left: 15px;
+    }
+    .label-contact{
+      font-size: 25px;
+      width: 185px;
+      height: 35px;
+    }
+    .footer-container{
+    justify-content: center !important;
+    }
+    .footer-content{
+      flex-direction: column;
+    }
+}
