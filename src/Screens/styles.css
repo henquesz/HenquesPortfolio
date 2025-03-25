@@ -1,19 +1,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Bruno+Ace+SC&family=Oxanium:wght@200..800&display=swap');
 
 html {
-background-color: black;
+background-color: #0b0b0d;
 overflow-x: hidden;
 font-family: "Alumni Sans Pinstripe", sans-serif !important;
 
 }
 ::-webkit-scrollbar { overflow-y:hidden; }
 
+.div-font{
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+}
+
 .aurora-container {
   width: 100%;
   height: 100%;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
 }
 
+.scroll {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.m-scroll {
+  display: flex;
+  width: max-content;
+  animation: scrollText 10s linear infinite;
+}
+
+.m-scroll-inner {
+  display: flex;
+}
+
+.m-scroll-inner i {
+  font-size: 80px;
+  color: white;
+  margin-right: 80px;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-10%);
+  }
+}
+
+img {
+  max-width: 150px;
+  height: 5rem;
+  padding: 0 15px;
+  object-fit: cover;
+}
+
+img:last-of-type {
+  padding-left: 0;
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 5rem;
+}
+
+.wrapper {
+  position: absolute;
+  display: flex;
+}
+
+section {
+  display: flex;
+  animation: swipe var(--speed) linear infinite backwards;
+}
+
+@keyframes swipe {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-100%);
+  }
+}
 
 
 

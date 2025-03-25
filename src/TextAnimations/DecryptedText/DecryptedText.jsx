@@ -231,6 +231,13 @@ export default function DecryptedText({
         }
       : {};
 
+      useEffect(() => {
+        const link = document.createElement("link");
+        link.href = "https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Bruno+Ace+SC&family=Oxanium:wght@200..800&display=swap";
+        link.rel = "stylesheet";
+        document.head.appendChild(link);
+      }, []);
+
   return (
     <motion.span
       className={parentClassName}
@@ -248,7 +255,7 @@ export default function DecryptedText({
 
           return (
             <span
-            style={{color: "white", fontSize: "35px"}}
+            style={{color: "white", fontSize: "45px", fontWeight: "600", fontFamily: "Alumni Sans Pinstripe, sans-serif"}}
               key={index}
               className={isRevealedOrDone ? className : encryptedClassName}
             >

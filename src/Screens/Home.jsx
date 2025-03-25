@@ -12,6 +12,7 @@ import Dither from '../Backgrounds/Dither/Dither';
 import Particles from '../Backgrounds/Particles/Particles';
 import GooeyNav from '../Components/GooeyNav/GooeyNav';
 import DecryptedText from '../TextAnimations/DecryptedText/DecryptedText';
+import { Banner } from "./Banner";
 
 export default function FullScreenDiv() {
   const handleAnimationComplete = () => {
@@ -45,6 +46,55 @@ export default function FullScreenDiv() {
     },
   ];
 
+  const icons = [
+    "devicon-amazonwebservices-plain-wordmark",
+    "devicon-androidstudio-plain-wordmark",
+    "devicon-angular-plain",
+    "devicon-antdesign-plain-wordmark",
+    "devicon-arduino-plain-wordmark",
+    "devicon-bitbucket-original-wordmark",
+    "devicon-bower-line-wordmark",
+    "devicon-cloudflare-plain-wordmark",
+    "devicon-confluence-plain-wordmark",
+    "devicon-csharp-plain",
+    "devicon-css3-plain-wordmark",
+    "devicon-dart-plain-wordmark",
+    "devicon-docker-plain-wordmark",
+    "devicon-express-original-wordmark",
+    "devicon-figma-plain",
+    "devicon-flutter-plain",
+    "devicon-firebase-plain-wordmark",
+    "devicon-git-plain-wordmark",
+    "devicon-gitlab-plain-wordmark",
+    "devicon-gradle-original-wordmark",
+    "devicon-grunt-line-wordmark",
+    "devicon-html5-plain-wordmark",
+    "devicon-java-plain-wordmark",
+    "devicon-javascript-plain",
+    "devicon-jenkins-plain",
+    "devicon-jira-plain-wordmark",
+    "devicon-jquery-plain-wordmark",
+    "devicon-maven-plain",
+    "devicon-mongodb-plain-wordmark",
+    "devicon-mysql-plain-wordmark",
+    "devicon-nextjs-original-wordmark",
+    "devicon-nodejs-plain-wordmark",
+    "devicon-oauth-plain",
+    "devicon-photoshop-plain",
+    "devicon-postgresql-plain-wordmark",
+    "devicon-react-original-wordmark",
+    "devicon-redhat-plain-wordmark",
+    "devicon-redux-original",
+    "devicon-redis-plain-wordmark",
+    "devicon-sequelize-plain-wordmark",
+    "devicon-spring-original-wordmark",
+    "devicon-typescript-plain",
+    "devicon-vitejs-plain",
+    "devicon-vuejs-plain-wordmark",
+    "devicon-xamarin-original-wordmark",
+    "devicon-xcode-plain"
+  ].map((icon) => ({ id: crypto.randomUUID(), icon }));
+
   const itemsHeader = [
     { label: "Home", href: "#" },
     { label: "About", href: "#" },
@@ -65,18 +115,18 @@ export default function FullScreenDiv() {
     timeVariance={300}
   />
       </header>
-<div style={{ height: "92vh", position: "relative", overflow: "hidden", borderRadius: "5.2%" }}>
+<div style={{ height: "80vh", position: "relative", overflow: "hidden", borderRadius: "5.2%" }}>
     {/* Aurora com z-index maior */}
     <div style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "25%", zIndex: 2 }}>
-      <Aurora   colorStops={["#000000", "#000000", "#000000"]}
+      <Aurora   colorStops={["#0b0b0d", "#0b0b0d", "#0b0b0d"]}
   blend={0.5}
   amplitude={1.0}
   speed={0.5} />
     </div>
 
-    <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 1 }}>
+    <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 1 }} className="div-font">
     <Dither
-    waveColor={[0.5, 0.3, 1]}
+    waveColor={[0.7, 0.3, 0.5]}
     disableAnimation={false}
     enableMouseInteraction={true}
     mouseRadius={0.3}
@@ -91,7 +141,7 @@ export default function FullScreenDiv() {
     <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 1 }}>
     <Lanyard position={[5, 0, 20]} gravity={[0, -40, 0]} />
     </div>
-    <div style={{ position: "absolute", top: 750, left: 50, width: "100%", height: "100%", zIndex: 1, textAlign: "left" }}>
+    <div style={{ position: "absolute", top: 650, left: 50, width: "100%", height: "100%", zIndex: 1, textAlign: "left" }}>
     <DecryptedText
 text="Vinicius Henques"
 speed={100}
@@ -117,9 +167,9 @@ encryptedClassName="encrypted"
   revealDirection="center"
 />
     </div>
-    <div style={{ position: "absolute", top: 750, left: -50, width: "100%", height: "100%", zIndex: 1, textAlign: "right" }}>
+    <div style={{ position: "absolute", top: 650, left: -50, width: "100%", height: "100%", zIndex: 1, textAlign: "right" }}>
     <DecryptedText
-text="Vinicius Henques"
+text="Making Shi..Good"
 speed={100}
 maxIterations={30}
 characters="ABCD1234!?"
@@ -132,7 +182,7 @@ encryptedClassName="encrypted"
 <br />  
 <br />
 <DecryptedText
-text="Mid-Level Software Engineer"
+text="Since 2004"
 speed={100}
 maxIterations={40}
 characters="ABCD1234!?"
@@ -146,25 +196,35 @@ encryptedClassName="encrypted"
   </div>
   <div
     style={{
-      height: "50vh",
+      height: "30vh",
       position: "relative",
       overflow: "hidden",
-      padding: "100px",
+      padding: "10px",
       display: "flex",
       flexDirection: "column", // Alinha os itens em coluna
       justifyContent: "center", // Centraliza verticalmente
       alignItems: "center", // Centraliza horizontalmente
       textAlign: "center", // Alinha o texto ao centro
     }}>
-
-<br />
-<br />
 <div style={{
-  width: "90%",
-  height: "300px",
-  backgroundColor: "red"
+  width: "100%",
+  height: "200px"
 }}>
-<InfiniteMenu items={items}/>
+
+<div className="inner">
+      <div className="wrapper">
+        {[...Array(3)].map((_, index) => (
+          <section key={index} style={{ "--speed": "80000ms" }}>
+            {icons.map(({ id, icon }) => (
+              <div className="icon" key={id}>
+                <i className={icon} style={{fontSize: "80px", marginRight: "80px"}}></i>
+              </div>
+            ))}
+          </section>
+        ))}
+      </div>
+    </div>
+
 </div>
   </div>
     </div>
